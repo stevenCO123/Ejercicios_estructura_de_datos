@@ -9,3 +9,34 @@
 *Realice un algoritmo que permita determinar el pago a la compañía de autobuses
 * y lo que debe pagar cada alumno por el viaje.
 */
+import java.util.Scanner;
+public class App{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int alumnos;
+        double costoPorAlumno, pagoCompañia;
+        System.out.println("ingrese la cantidad de alumnos");
+        alumnos = sc.nextInt();
+
+        if (alumnos >= 100) {
+            costoPorAlumno = 65;
+            pagoCompañia = alumnos * costoPorAlumno;
+        }
+        else if (alumnos >= 50) {
+            costoPorAlumno = 70;
+            pagoCompañia = alumnos * costoPorAlumno;
+        }
+        else if (alumnos >= 30) {
+            costoPorAlumno = 95;
+            pagoCompañia = alumnos * costoPorAlumno;
+        }
+        else {
+            pagoCompañia = 4000;
+            costoPorAlumno = pagoCompañia / alumnos;
+        }
+
+        System.out.println("a la compañia se le paga: " +pagoCompañia);
+        System.out.println("los alumnos deben pagar: " + costoPorAlumno);
+
+    }
+}
